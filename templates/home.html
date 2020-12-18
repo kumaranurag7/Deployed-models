@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+  background-image: url('https://i.imgur.com/rQesdke.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+</style>
+<center>
+    <h1> NYC Rental Property Price Prediction </h1><br>
+</center>
+</head>
+
+    <body>
+    <center>
+                                
+                                <form method="POST", action="{{url_for('home')}}">
+				    
+                                    <input type="number" name= "min_nights" placeholder="Minimum Nights"><br>				    
+                                    <input  type="number" name= "no_reviews" placeholder="Number of reviews"><br>
+                				    <input  type="number" name= "host_listings" placeholder="Number of listing of the host"><br>
+                				    <input  type="number" name= "availability" placeholder="No. of days available/yr"><br>
+				    
+				    <div>
+				    <select name="type" >
+					    <option selected>Select Room type</option>
+				    	    <option value="Private room">Private room</option>
+					    <option value="Shared room">Shared room</option>
+				    	    <option value="Entire home">Entire home/apt</option>
+				    </select></div>
+                                    
+				    <div>
+                                        <select  name="borough">
+                                            <option selected>Choose Boroughs</option>
+                                            <option value="Manhattan">Manhattan</option>
+                                            <option value="Brooklyn">Brooklyn</option>
+                                            <option value="Queens">Queens</option>
+                    					    <option value="Bronx">Bronx</option>
+                    					    <option value="Staten Island">Staten Island</option>
+                                        </select><br>				    
+					<select  name="neighbourhood">
+					    <option selected>Choose Neighbourhood</option>
+                                            <option va<option value="Nolita"> Nolita </option>
+                                            <option value=" Upper West Side "> Upper West Side </option>
+                                            <option value=" East Elmhurst "> East Elmhurst </option>
+                                            <option value="Concord"> Concord </option>
+                                            <option value="Harlem"> Harlem </option>
+                                            <option value="Battery Park City"> Battery Park City </option>
+                                            <option value="Rosedale"> Rosedale </option>
+                                            <option value="Fort Greene"> Fort Greene </option>
+                                            <option value="Chelsea"> Chelsea </option>
+                                            <option value="Washington Heights"> Washington Heights </option>
+                                            <option value="Kensington"> Kensington </option>
+                                            <option value="Williamsburg"> Williamsburg </option>
+                                            <option value="Hell's Kitchen"> Hell's Kitchen </option>
+                                            <option value="Sunset Park"> Sunset Park </option>
+                                            <option value=" 15 "> Crown Heights </option>
+                                            <option value=" 16 "> Civic Center </option>
+                                            <option value=" 17 "> Bushwick </option>
+                                            <option value=" 18 "> Inwood </option>
+                                            <option value=" 19 "> Greenpoint </option>
+                                            <option value=" 20 "> Long Island City </option>
+                                            <option value=" 21 "> Carroll Gardens </option>
+                                            <option value=" 22 "> Prospect-Lefferts Gardens </option>
+                                            <option value=" 23 "> Astoria </option>
+                                            <option value=" 24 "> Bedford-Stuyvesant </option>
+                                            <option value=" 25 "> Boerum Hill </option>
+                                            <option value=" 26 "> Murray Hill </option>
+                                            <option value=" 27 "> Flushing </option>
+                                            <option value=" 28 "> Upper East Side </option>
+                                            <option value=" 29 "> Chinatown </option>
+                                            <option value=" 30 "> Woodside </option>
+                                            <option value=" 31 "> Midtown </option>
+                                            <option value=" 32 "> Breezy Point </option>
+                                            <option value=" 33 "> Sheepshead Bay </option>
+                                            <option value=" 34 "> Flatiron District </option>
+                                            <option value=" 35 "> East Harlem </option>
+                                            <option value=" 36 "> Downtown Brooklyn </option>
+                                            <option value=" 37 "> Financial District </option>
+                                            <option value=" 38 "> East Village </option>
+                                            <option value=" 39 "> Sunnyside </option>
+                                            <option value=" 40 "> Greenwich Village </option>
+                                            <option value=" 41 "> Middle Village </option>
+                                            <option value=" 42 "> Roosevelt Island </option>
+                                            <option value=" 43 "> Ditmars Steinway </option>
+                                            <option value=" 44 "> Ridgewood </option>
+                                            <option value=" 45 "> Lower East Side </option>
+                                            <option value=" 46 "> Theater District </option>
+                                            <option value=" 47 "> Bay Ridge </option>
+                                            <option value=" 48 "> Park Slope </option>
+                                            <option value=" 49 "> Prospect Heights </option>
+                                            <option value=" 50 "> Tompkinsville </option>
+                                            <option value=" 51 "> Morningside Heights </option>
+                                            <option value=" 52 "> West Village </option>
+                                            <option value=" 53 "> Gramercy </option>
+                                            <option value=" 54 "> Throgs Neck </option>
+                                            <option value=" 55 "> East Flatbush </option>
+                                            <option value=" 56 "> Brighton Beach </option>
+                                            <option value=" 57 "> Forest Hills </option>
+                                            <option value=" 58 "> Tribeca </option>
+                                            <option value=" 59 "> Jackson Heights </option>
+                                            <option value=" 60 "> Gowanus </option>
+                                            <option value=" 61 "> Kips Bay </option>
+                                            <option value=" 62 "> Flatbush </option>
+                                            <option value=" 63 "> Port Morris </option>
+                                            <option value=" 64 "> Ozone Park </option>
+                                            <option value=" 65 "> Elmhurst </option>
+                                            <option value=" 66 "> Bensonhurst </option>
+                                            <option value=" 67 "> Clason Point </option>
+                                            <option value=" 68 "> SoHo </option>
+                                            <option value=" 69 "> Clinton Hill </option>
+                                            <option value=" 70 "> Jamaica </option>
+                                            <option value=" 71 "> Two Bridges </option>
+                                            <option value=" 72 "> Little Italy </option>
+                                            <option value=" 73 "> DUMBO </option>
+                                            <option value=" 74 "> Bayswater </option>
+                                            <option value=" 75 "> Soundview </option>
+                                            <option value=" 76 "> East New York </option>
+                                            <option value=" 77 "> Brooklyn Heights </option>
+                                            <option value=" 78 "> Mott Haven </option>
+                                            <option value=" 79 "> Kingsbridge </option>
+                                            <option value=" 80 "> Windsor Terrace </option>
+                                            <option value=" 81 "> Red Hook </option>
+                                            <option value=" 82 "> Brownsville </option>
+                                            <option value=" 83 "> Springfield Gardens </option>
+                                            <option value=" 84 "> Highbridge </option>
+                                            <option value=" 85 "> Jamaica Estates </option>
+                                            <option value=" 86 "> Concourse Village </option>
+                                            <option value=" 87 "> West Brighton </option>
+                                            <option value=" 88 "> New Brighton </option>
+                                            <option value=" 89 "> Midwood </option>
+                                            <option value=" 90 "> South Slope </option>
+                                            <option value=" 91 "> Rego Park </option>
+                                            <option value=" 92 "> Woodlawn </option>
+                                            <option value=" 93 "> St. Albans </option>
+                                            <option value=" 94 "> Longwood </option>
+                                            <option value=" 95 "> Rockaway Beach </option>
+                                            <option value=" 96 "> Canarsie </option>
+                                            <option value=" 97 "> Columbia St </option>
+                                            <option value=" 98 "> Fordham </option>
+                                            <option value=" 99 "> Wakefield </option>
+                                            <option value=" 100 "> Briarwood </option>
+                                            <option value=" 101 "> Fieldston </option>
+                                            <option value=" 102 "> Howard Beach </option>
+                                            <option value=" 103 "> Parkchester </option>
+                                            <option value=" 104 "> Claremont Village </option>
+                                            <option value=" 105 "> Grant City </option>
+                                            <option value=" 106 "> Fort Hamilton </option>
+                                            <option value=" 107 "> Concourse </option>
+                                            <option value=" 108 "> Flatlands </option>
+                                            <option value=" 109 "> South Ozone Park </option>
+                                            <option value=" 110 "> Queens Village </option>
+                                            <option value=" 111 "> Richmond Hill </option>
+                                            <option value=" 112 "> Baychester </option>
+                                            <option value=" 113 "> Kew Gardens Hills </option>
+                                            <option value=" 114 "> Morrisania </option>
+                                            <option value=" 115 "> Hunts Point </option>
+                                            <option value=" 116 "> Great Kills </option>
+                                            <option value=" 117 "> Arverne </option>
+                                            <option value=" 118 "> Schuylerville </option>
+                                            <option value=" 119 "> Morris Heights </option>
+                                            <option value=" 120 "> Borough Park </option>
+                                            <option value=" 121 "> Cobble Hill </option>
+                                            <option value=" 122 "> Hollis </option>
+                                            <option value=" 123 "> Woodhaven </option>
+                                            <option value=" 124 "> Melrose </option>
+                                            <option value=" 125 "> Randall Manor </option>
+                                            <option value=" 126 "> Sea Gate </option>
+                                            <option value=" 127 "> Stuyvesant Town </option>
+                                            <option value=" 128 "> Maspeth </option>
+                                            <option value=" 129 "> Port Richmond </option>
+                                            <option value=" 130 "> Bath Beach </option>
+                                            <option value=" 131 "> Belmont </option>
+                                            <option value=" 132 "> University Heights </option>
+                                            <option value=" 133 "> Westerleigh </option>
+                                            <option value=" 134 "> Arden Heights </option>
+                                            <option value=" 135 "> Coney Island </option>
+                                            <option value=" 136 "> Fresh Meadows </option>
+                                            <option value=" 137 "> Stapleton </option>
+                                            <option value=" 138 "> Corona </option>
+                                            <option value=" 139 "> Kew Gardens </option>
+                                            <option value=" 140 "> Eastchester </option>
+                                            <option value=" 141 "> Cypress Hills </option>
+                                            <option value=" 142 "> Vinegar Hill </option>
+                                            <option value=" 143 "> Manhattan Beach </option>
+                                            <option value=" 144 "> Glendale </option>
+                                            <option value=" 145 "> Bellerose </option>
+                                            <option value=" 146 "> Clifton </option>
+                                            <option value=" 147 "> Williamsbridge </option>
+                                            <option value=" 148 "> Pelham Bay </option>
+                                            <option value=" 149 "> Arrochar </option>
+                                            <option value=" 150 "> NoHo </option>
+                                            <option value=" 151 "> College Point </option>
+                                            <option value=" 152 "> Gravesend </option>
+                                            <option value=" 153 "> Far Rockaway </option>
+                                            <option value=" 154 "> New Dorp Beach </option>
+                                            <option value=" 155 "> Emerson Hill </option>
+                                            <option value=" 156 "> Navy Yard </option>
+                                            <option value=" 157 "> St. George </option>
+                                            <option value=" 158 "> Allerton </option>
+                                            <option value=" 159 "> Unionport </option>
+                                            <option value=" 160 "> North Riverdale </option>
+                                            <option value=" 161 "> Pelham Gardens </option>
+                                            <option value=" 162 "> City Island </option>
+                                            <option value=" 163 "> Little Neck </option>
+                                            <option value=" 164 "> Tottenville </option>
+                                            <option value=" 165 "> Norwood </option>
+                                            <option value=" 166 "> Edgemere </option>
+                                            <option value=" 167 "> Mount Hope </option>
+                                            <option value=" 168 "> Mount Eden </option>
+                                            <option value=" 169 "> Cambria Heights </option>
+                                            <option value=" 170 "> Bayside </option>
+                                            <option value=" 171 "> Grymes Hill </option>
+                                            <option value=" 172 "> Laurelton </option>
+                                            <option value=" 173 "> Edenwald </option>
+                                            <option value=" 174 "> Whitestone </option>
+                                            <option value=" 175 "> Bronxdale </option>
+                                            <option value=" 176 "> Marble Hill </option>
+                                            <option value=" 177 "> Tremont </option>
+                                            <option value=" 178 "> Silver Lake </option>
+                                            <option value=" 179 "> Bay Terrace, Staten Island </option>
+                                            <option value=" 180 "> Morris Park </option>
+                                            <option value=" 181 "> Riverdale </option>
+                                            <option value=" 182 "> Dyker Heights </option>
+                                            <option value=" 183 "> Bergen Beach </option>
+                                            <option value=" 184 "> Castleton Corners </option>
+                                            <option value=" 185 "> Todt Hill </option>
+                                            <option value=" 186 "> Westchester Square </option>
+                                            <option value=" 187 "> Howland Hook </option>
+                                            <option value=" 188 "> Douglaston </option>
+                                            <option value=" 189 "> Bay Terrace </option>
+                                            <option value=" 190 "> Midland Beach </option>
+                                            <option value=" 191 "> Mariners Harbor </option>
+                                            <option value=" 192 "> Rossville </option>
+                                            <option value=" 193 "> Holliswood </option>
+                                            <option value=" 194 "> Mill Basin </option>
+                                            <option value=" 195 "> Castle Hill </option>
+                                            <option value=" 196 "> Graniteville </option>
+                                            <option value=" 197 "> Dongan Hills </option>
+                                            <option value=" 198 "> Neponsit </option>
+                                            <option value=" 199 "> Huguenot </option>
+                                            <option value=" 200 "> South Beach </option>
+                                            <option value=" 201 "> New Springville </option>
+                                            <option value=" 202 "> Belle Harbor </option>
+                                            <option value=" 203 "> Van Nest </option>
+                                            <option value=" 204 "> Olinville </option>
+                                            <option value=" 205 "> Jamaica Hills </option>
+                                            <option value=" 206 "> East Morrisania </option>
+                                            <option value=" 207 "> Eltingville </option>
+                                            <option value=" 208 "> Oakwood </option>
+                                            <option value=" 209 "> West Farms </option>
+                                            <option value=" 210 "> Prince's Bay </option>
+                                            <option value=" 211 "> Shore Acres </option>
+                                            <option value=" 212 "> Richmondtown </option>
+                                            <option value=" 213 "> Spuyten Duyvil </option>
+                                            <option value=" 214 "> Lighthouse Hill </option>
+                                            <option value=" 215 "> Bull's Head </option>
+                                            <option value=" 216 "> Co-op City </option>
+                                            <option value=" 217 "> Rosebank </option>
+					    
+					</select>
+				    </div><br>
+
+                                    <button >Predict Price</button>
+                                </form>
+
+            <!-- Header End -->
+            
+            
+            
+
+        </div>
+
+
+    </center>
+    </body>
+</html>

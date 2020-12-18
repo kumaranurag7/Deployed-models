@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+  background-image: url('https://i.imgur.com/rQesdke.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+</style>
+<center>
+    <h1> NYC Rental Property Price Prediction </h1><br>
+</center>
+</head>
+<body >
+
+    <center>
+        <br>
+        <br>
+        <h1>  Predicted price  :  </h1>
+    
+    {%if data != 0%}
+    <p> {{ pred }}$ </p>  
+
+    {%else%}
+    <h1>Invalid Entry</h1>
+    
+    {%endif%}
+    
+        <br><br>
+    <a href='/'>go back to home page</a>
+
+    </center>
+    
+    
+
+</body>
+
+</html>
+
+
+
+
+
+
